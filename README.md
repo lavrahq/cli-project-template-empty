@@ -1,2 +1,3 @@
-# cli-template-empty
-The default, empty Lavra CLI Project template.
+# {{.Answers.Name}}
+
+{{.Answers.Description}}

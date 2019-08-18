@@ -1,0 +1,7 @@
+name: {{.Answers.Name}}
+description: {{.Answers.Description}}
+
+network:
+  name: {{.Answers.NetworkName}}
+
+products: {}
