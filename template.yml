@@ -9,19 +9,21 @@ description: An empty template that generates an empty project.
 # folder. Values from the survey are passed within the Answers
 # struct.
 prompt:
-  - name: Name
-    type: Input
-    prompt:
-      message: Name
-    validate:
-      required: true
-  - name: Description
-    type: Input
-    prompt:
-      message: Description
-  - name: NetworkName
-    type: Input
-    prompt:
-      message: Description
-    validate:
-      required: true
+  name: empty-prompt
+  questions:
+    - name: Name
+      type: Input
+      prompt:
+        message: Name
+      validate:
+        required: true
+    - name: Description
+      type: Input
+      prompt:
+        message: Description
+    - name: NetworkName
+      type: Input
+      prompt:
+        message: Description
+      validate:
+        required: true
