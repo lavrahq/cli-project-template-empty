@@ -3,12 +3,12 @@ name: empty
 author: lavrahq
 description: An empty template that generates an empty project.
 
-# Survey
+# Prompt
 #
 # Used to templatize the template files from the template/
 # folder. Values from the survey are passed within the Answers
 # struct.
-survey:
+prompt:
   - name: Name
     type: Input
     prompt:
