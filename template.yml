@@ -33,7 +33,7 @@ templates:
 # folder. Values from the survey are passed within the Answers
 # struct.
 prompt:
-  name: empty-prompt
+  name: Empty project
   questions:
     - name: Name
       type: Input
