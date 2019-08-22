@@ -61,4 +61,4 @@ prompt:
         help: The name of the private network used for this project.
       validate:
         required: true
-      when: (Answers.ConfigureNetworkName == true)
+      when: Answers.ConfigureNetworkName
