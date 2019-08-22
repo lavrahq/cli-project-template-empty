@@ -3,6 +3,30 @@ name: empty
 author: lavrahq
 description: An empty template that generates an empty project.
 
+# Expansions
+#
+# The folders/files that need to be copied from the template. Specify
+# a when to decide when 
+expansions:
+  - from: defaults
+    when: always
+
+# Templates
+#
+# The files that should be treated as templates, will be passed
+# various variables, excluding any not included in needs, or, will
+# provide all if when is not set.
+templates:
+  - file: project.yml
+    when: always
+    needs:
+      - answers
+  - file: README.md
+    when: always
+    meeds:
+      - answers
+      
+
 # Prompt
 #
 # Used to templatize the template files from the template/
@@ -15,15 +39,25 @@ prompt:
       type: Input
       prompt:
         message: Name
+        help: The name of this project. Will be slugified.
       validate:
         required: true
     - name: Description
       type: Input
       prompt:
         message: Description
+        help: A brief description of this project.
+      when: Answers.Name == "test"
+    - name: ConfigureNetworkName
+      type: Confirm
+      prompt:
+        message: Set Network Name?
+        help: Yes to provide a name for the private network used for this project.
     - name: NetworkName
       type: Input
       prompt:
-        message: Description
+        message: Network Name
+        help: The name of the private network used for this project.
       validate:
         required: true
+      when: Answers.ConfigureNetworkName
