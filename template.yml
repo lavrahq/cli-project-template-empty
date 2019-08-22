@@ -47,7 +47,8 @@ prompt:
       prompt:
         message: Description
         help: A brief description of this project.
-      when: Answers.Name == "test"
+      when: |
+        (Answers.Name == "test")
     - name: ConfigureNetworkName
       type: Confirm
       prompt:
