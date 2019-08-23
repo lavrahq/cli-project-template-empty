@@ -3,11 +3,11 @@ name: empty
 author: lavrahq
 description: An empty template that generates an empty project.
 
-# Expansions
+# Copy
 #
 # The folders/files that need to be copied from the template. Specify
-# a when to decide when 
-expansions:
+# a when to decide if a path needs to be copied.
+copy:
   - from: defaults
     when: always
 
@@ -37,18 +37,21 @@ prompt:
   questions:
     - name: Name
       type: Input
+      transform: Slug
       prompt:
         message: Name
         help: The name of this project. Will be slugified.
       validate:
         required: true
+        minLength: 3
+        maxLength: 255
     - name: Description
       type: Input
       prompt:
         message: Description
         help: A brief description of this project.
-      when: |
-        (Answers.Name == "test")
+      validate:
+        maxLength: 255
     - name: ConfigureNetworkName
       type: Confirm
       prompt:
@@ -61,4 +64,5 @@ prompt:
         help: The name of the private network used for this project.
       validate:
         required: true
+        maxLength: 60
       when: Answers.ConfigureNetworkName
