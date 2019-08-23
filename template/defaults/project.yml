@@ -1,7 +1,10 @@
 name: {{.Answers.Name}}
-description: {{.Answers.Description}}
+description: |
+  {{.Answers.Description}}
 
+{{if .Answers.ConfigureNetworkName}}
 network:
   name: {{.Answers.NetworkName}}
+{{end}}
 
 products: {}

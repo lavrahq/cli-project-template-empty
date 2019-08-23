@@ -18,9 +18,7 @@ copy:
 # provide all if when is not set.
 fill:
   - file: project.yml
-    when: always
   - file: README.md
-    when: always
       
 
 # Prompt
@@ -29,7 +27,6 @@ fill:
 # folder. Values from the survey are passed within the Answers
 # struct.
 prompt:
-  name: Empty project
   questions:
     - name: Name
       type: Input
@@ -42,7 +39,7 @@ prompt:
         minLength: 3
         maxLength: 255
     - name: Description
-      type: Input
+      type: Multiline
       prompt:
         message: Description
         help: A brief description of this project.
@@ -55,6 +52,7 @@ prompt:
         help: Yes to provide a name for the private network used for this project.
     - name: NetworkName
       type: Input
+      transform: Slug
       prompt:
         message: Network Name
         help: The name of the private network used for this project.
