@@ -16,7 +16,7 @@ copy:
 # The files that should be treated as templates, will be passed
 # various variables, excluding any not included in needs, or, will
 # provide all if when is not set.
-templates:
+fill:
   - file: project.yml
     when: always
     needs:
