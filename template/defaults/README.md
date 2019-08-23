@@ -2,4 +2,4 @@
 
 {{.Answers.Description}}
 
-Created from the {{.Template.Name}} template.
+Created from the {{.Template.Name}} template, this is the value of test: {{.Vars.Test}}.

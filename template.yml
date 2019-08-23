@@ -9,7 +9,6 @@ description: An empty template that generates an empty project.
 # a when to decide if a path needs to be copied.
 copy:
   - from: defaults
-    when: always
 
 # Templates
 #
@@ -19,6 +18,8 @@ copy:
 fill:
   - file: project.yml
   - file: README.md
+    vars:
+      Test: YES!
       
 
 # Prompt
