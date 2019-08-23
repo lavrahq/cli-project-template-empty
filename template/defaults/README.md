@@ -4,4 +4,6 @@
 
 Created from the {{.Template.Name}} template, this is the value of test: {{.Vars.Test}}.
 
-{{.Env.LOGNAME}}
+{{range .Env}}
+.
+{{end}}
