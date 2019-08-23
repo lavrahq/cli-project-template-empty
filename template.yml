@@ -19,12 +19,8 @@ copy:
 fill:
   - file: project.yml
     when: always
-    needs:
-      - answers
   - file: README.md
     when: always
-    meeds:
-      - answers
       
 
 # Prompt
