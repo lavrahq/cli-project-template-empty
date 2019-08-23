@@ -1,4 +1,4 @@
-# {{.Answers.Name}}
+# {{.Answers.RawName}}
 
 {{.Answers.Description}}
 
