@@ -4,6 +4,6 @@
 
 Created from the {{.Template.Name}} template, this is the value of test: {{.Vars.Test}}.
 
-{{range .Env}}
-.
+{{range key, value := .Env}}
+{{key}}: {{value}}
 {{end}}
